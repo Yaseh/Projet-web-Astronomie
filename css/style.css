@@ -136,12 +136,16 @@ body.fond-sys{
     justify-content: center;
     letter-spacing: 2px;
     font-size: 2.5rem;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 4rem;
+    margin-top: 8rem;
 }
 .intro-sys {
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
     font-size: 1.2rem;
+    margin-bottom: 5rem;
+
     }
     /* partie text + planete */
     .blok-planete-full {
@@ -179,13 +183,18 @@ body.fond-sys{
   font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: 1.5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .texte-planete-center strong {
-  color: #32b8c6;
+  color: #075366;
+  
 }
 
 /* Scroll fluide vers les ancres */
 html {
   scroll-behavior: smooth;
+}
+.scroll-top{
+  color: aliceblue;
 }
