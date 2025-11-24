@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* css pour la base  de toute les page*/
 body {
     background-color:#040813;
     color: white;
@@ -15,7 +16,7 @@ header{
     justify-content: space-between;
     align-items: center;
 }
-nav a{
+header nav a{
     color:aliceblue ;
     text-decoration: none;
     padding: 4px 10px; 
@@ -23,7 +24,7 @@ nav a{
     text-transform: uppercase;/* force tous à être en majuscule*/
     font-size: 0.9rem;/* taille du texte*/
 }
-nav a:hover{
+header nav a:hover{
     color: #1d43ff;
     background-color: aliceblue ;
     
@@ -35,12 +36,13 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-nav ul{
+header nav ul{
     list-style: none;
     display: flex;
     gap: 20px;
     padding: 0;
 }
+/* css index.html*/
 .page-accueil{
     display: flex;
     flex-direction: column;
@@ -72,4 +74,118 @@ nav ul{
     border-radius: 5px;
     margin-top: 20px;
    
+}
+/* css pour system.html*/
+body.fond-sys{
+    background-image: url(../images/space-star.png);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+
+}
+
+/* bloc pour la ligne des planete */
+.planetes-ligne {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem; /* augmente l'espace entre les planètes */
+  margin: 3rem auto;
+  overflow-x: auto; /* permet de mettre l'option "scroll horizontal pour le rendre accessible sur les petit écrans*/
+  overflow-y: hidden;/* desactive la barre de scroll vertical car elle apparait automatiquement */
+}
+
+.planetes-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #fff; /* couleur du texte */
+  flex-shrink: 0;
+  transition: transform 0.3s ease; /* ajoute un effet au survol (c'est l'ia qui a fait ça ) */
+}
+
+.planetes-link:hover {
+  transform: scale(1.1); /* agrandit légèrement au survol */
+}
+
+.planetes-img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  margin-bottom: 0.8rem;
+  transition: transform 0.3s ease; /* ajoute la transition */
+  cursor: pointer; /* change le curseur au survol */
+}
+
+.planetes-img:hover {
+  transform: scale(1.15); /* agrandit l'image au survol */
+}
+
+.planetes-link span {
+  font-size: 1rem; /* augmente la taille du texte */
+  text-align: center;
+  white-space: nowrap;
+  font-weight: 500; /* texte un peu plus gras */
+}
+/* fin du css pour ligne planete */
+/* debut css pour l'intro*/
+.intro-sys h1{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    letter-spacing: 2px;
+    font-size: 2.5rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.intro-sys {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 1.2rem;
+    }
+    /* partie text + planete */
+    .blok-planete-full {
+  min-height: 100vh; /* chaque bloc prend au moins toute la hauteur de l'écran */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.img-planete-center {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 2rem;
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.texte-planete-center {
+  max-width: 800px;
+  text-align: left;
+}
+
+.texte-planete-center h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #32b8c6;
+  text-align: center;
+}
+
+.texte-planete-center p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.texte-planete-center strong {
+  color: #32b8c6;
+}
+
+/* Scroll fluide vers les ancres */
+html {
+  scroll-behavior: smooth;
 }
