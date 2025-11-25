@@ -351,14 +351,12 @@ body.background-missions {
   margin: 0 auto;
 }
 .champs{
-  background-color: #39626dbb;
+  background-color: black;
   display: flex;
   flex-direction: column;
   margin: 2.5rem;
 }
-/* ======================================================= */
-/* AJOUT RESPONSIVE (À COLLER À LA FIN)        */
-/* ======================================================= */
+
 
 /* --- TABLETTE (Entre 768px et 1024px) --- */
 @media screen and (max-width: 1024px) {
@@ -416,9 +414,10 @@ body.background-missions {
 
     /* 3. PAGE MISSIONS (ZIGZAG) */
     .mission-zigzag {
-        flex-direction: column; /* Tout s'empile */
+        flex-direction: column-reverse; /* Tout s'empile */
         text-align: center; /* Centre le texte */
         margin: 2rem auto;
+        gap: 20px;
     }
 
     .mission-image {
