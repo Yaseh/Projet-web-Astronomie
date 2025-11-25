@@ -464,7 +464,7 @@ body.background-missions {
 
     /* 6. GESTION GÉNÉRALE DES TITRES ET TEXTES */
     h1 {
-        font-size: 2rem !important; /* Force les titres à réduire */
+        font-size: 2rem !important; 
         margin-top: 4rem !important; /* Ajuste les marges du haut */
     }
     
