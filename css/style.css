@@ -356,3 +356,107 @@ body.background-missions {
   flex-direction: column;
   margin: 2.5rem;
 }
+/* ======================================================= */
+/* AJOUT RESPONSIVE (À COLLER À LA FIN)        */
+/* ======================================================= */
+
+/* --- TABLETTE (Entre 768px et 1024px) --- */
+@media screen and (max-width: 1024px) {
+    
+    /* On passe la galerie de 4 colonnes à 2 colonnes */
+    .grille-galerie {
+        grid-template-columns: 1fr 1fr;
+        padding: 0 20px; /* Ajout de marge sur les côtés */
+    }
+
+    /* On réduit un peu les marges des missions */
+    .mission-zigzag {
+        width: 100%;
+        padding: 0 20px;
+        gap: 2rem;
+    }
+    
+    .intro-missions, .texte-planete-center {
+        padding: 0 20px;
+    }
+}
+
+/* --- MOBILE (Moins de 768px) --- */
+@media screen and (max-width: 767px) {
+
+    /* 1. HEADER & NAVIGATION */
+    header {
+        flex-direction: column; /* Logo au-dessus, menu en dessous */
+        gap: 15px;
+    }
+
+    header nav ul {
+        flex-direction: column; /* Menu vertical */
+        gap: 10px;
+        text-align: center;
+    }
+
+    /* 2. PAGE SYSTÈME SOLAIRE */
+    /* Les petites planètes du haut passent sur plusieurs lignes */
+    .planetes-ligne {
+        flex-wrap: wrap; 
+        gap: 1rem;
+    }
+
+    /* Les blocs de présentation (image + texte) */
+    .blok-planete-full {
+        padding: 2rem 1rem;
+        height: auto; /* On enlève la hauteur forcée */
+        min-height: auto;
+    }
+
+    .texte-planete-center h2 {
+        font-size: 1.8rem; /* Titres plus petits */
+    }
+
+    /* 3. PAGE MISSIONS (ZIGZAG) */
+    .mission-zigzag {
+        flex-direction: column; /* Tout s'empile */
+        text-align: center; /* Centre le texte */
+        margin: 2rem auto;
+    }
+
+    .mission-image {
+        width: 100%; /* L'image prend toute la largeur */
+        height: auto;
+        max-width: 100%; /* Sécurité */
+        margin-bottom: 20px;
+    }
+
+    /* 4. PAGE GALERIE */
+    .grille-galerie {
+        grid-template-columns: 1fr; /* 1 seule colonne */
+        gap: 30px;
+    }
+
+    .img-grille img {
+        width: 100%; /* Image responsive */
+        height: auto;
+    }
+
+    /* 5. PAGE CONTACT */
+    .champs {
+        margin: 1rem; /* Réduit les marges externes */
+        width: 90%; /* Prend plus de place sur petit écran */
+    }
+
+    .GRATUIT {
+        font-size: 20px; /* Réduit la taille du gros texte */
+        margin: 4rem auto;
+    }
+
+    /* 6. GESTION GÉNÉRALE DES TITRES ET TEXTES */
+    h1 {
+        font-size: 2rem !important; /* Force les titres à réduire */
+        margin-top: 4rem !important; /* Ajuste les marges du haut */
+    }
+    
+    p {
+        font-size: 1rem;
+    }
+}
